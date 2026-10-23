@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tugas 5 - Tabel HTML dan Figure</title>
+  <style>
+    :root { --navy:#173b4f; --teal:#187d78; --mint:#eaf6f2; --ink:#243943; --line:#d5e3df; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:linear-gradient(135deg,#eef7f5,#f7f8fc); color:var(--ink); font-family:Arial,Helvetica,sans-serif; line-height:1.6; }
+    main { width:min(920px, calc(100% - 32px)); margin:48px auto; }
+    .sheet { background:#fff; border:1px solid #e3ece9; border-radius:22px; padding:clamp(24px,5vw,54px); box-shadow:0 16px 50px #173b4f12; }
+    .eyebrow { color:var(--teal); font-weight:700; letter-spacing:.12em; text-transform:uppercase; font-size:.78rem; margin:0 0 8px; }
+    h1 { color:var(--navy); font-size:clamp(2rem,5vw,3rem); line-height:1.15; margin:0; }
+    .intro { color:#62777e; margin:12px 0 30px; }
+    h2 { color:var(--navy); font-size:1.25rem; margin:0 0 15px; }
+    section { margin-top:32px; }
+    .table-wrap { overflow-x:auto; border-radius:12px; }
+    table { width:100%; border-collapse:collapse; border:1px solid var(--line); }
+    th,td { border:1px solid var(--line); padding:12px 15px; }
+    th { color:#fff; background:var(--navy); text-align:left; }
+    tbody tr:nth-child(even) { background:#f3f8f7; }
+    tfoot td { background:var(--mint); color:var(--teal); font-weight:700; }
+    figure { margin:0; background:#f4faf8; border:1px solid var(--line); border-radius:16px; overflow:hidden; }
+    figure img { display:block; width:100%; height:auto; }
+    figcaption { padding:12px 16px; text-align:center; color:#557078; font-size:.92rem; }
+    footer { margin-top:32px; padding-top:18px; border-top:1px solid var(--line); color:#73868b; font-size:.85rem; }
+    @media (max-width:600px) { main{margin:18px auto}.sheet{border-radius:16px} th,td{padding:10px 11px;font-size:.92rem} }
+  </style>
+</head>
+<body>
+  <main>
+    <article class="sheet">
+      <header>
+        <p class="eyebrow">Perancangan dan Pemrograman Web</p>
+        <h1>Tugas 5</h1>
+        
+      </header>
+
+      <section aria-labelledby="judul-tabel">
+        <h2 id="judul-tabel">Data Siswa</h2>
+        <div class="table-wrap">
+          <table border="1" cellpadding="10" cellspacing="0" align="center" bgcolor="#ffffff" aria-label="Tabel data siswa">
+            <thead>
+              <tr align="center" valign="middle" bgcolor="#173b4f">
+                <th scope="col" rowspan="2">No.</th>
+                <th scope="col" colspan="2">Identitas Siswa</th>
+                <th scope="col" rowspan="2">Jurusan</th>
+              </tr>
+              <tr align="center" valign="middle" bgcolor="#246b72">
+                <th scope="col">Nama</th>
+                <th scope="col">NIM</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr align="left" valign="top" bgcolor="#ffffff">
+                <td align="center">1</td><td>Aditya Pratama</td><td>20261001</td><td>Informatika</td>
+              </tr>
+              <tr align="left" valign="middle" bgcolor="#f3f8f7">
+                <td align="center">2</td><td>Nadia Putri</td><td>20261002</td><td>Sistem Informasi</td>
+              </tr>
+              <tr align="left" valign="bottom" bgcolor="#ffffff">
+                <td align="center">3</td><td>Rizky Maulana</td><td>20261003</td><td>Informatika</td>
+              </tr>
+              <tr align="left" valign="middle" bgcolor="#f3f8f7">
+                <td align="center">4</td><td>Siti Aulia</td><td>20261004</td><td>Teknik Komputer</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr align="center" valign="middle" bgcolor="#eaf6f2">
+                <td colspan="4">Jumlah siswa: 4 orang</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="judul-figure">
+        <h2 id="judul-figure">Suasana Belajar Bersama</h2>
+        <figure>
+          <img src="assets/ilustrasi-mahasiswa.png" alt="Ilustrasi tiga mahasiswa belajar bersama di ruang kampus" width="900" height="520">
+          <figcaption>Gambar 1. Mahasiswa berdiskusi dan belajar bersama di kampus.</figcaption>
+        </figure>
+      </section>
+
+      <footer>Nama: ____________________ &nbsp; | &nbsp; Kelas: ____________________</footer>
+    </article>
+  </main>
+</body>
+</html>
